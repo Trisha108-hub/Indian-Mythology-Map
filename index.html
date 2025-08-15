@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mystical Myths of India</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="titles">
+      <h1>Mystical Myths of India </h1>
+      <p class="subtitle">Discover legends, unlock hidden artifacts & read words of inspiration from every land</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="map-area">
+      <div class="map-wrapper">       
+        <img id="mapImage" src="indian-flag.png" alt="India Map" />
+        <div id="dots-layer" aria-hidden="false"></div>
+      </div>
+      <p class="hint">Click any glowing dot to read a myth and try a mini-game — one chance to find the hidden artifact!</p>
+    </section>
+  </main>
+
+
+  <div id="popup" class="popup hidden" role="dialog" aria-modal="true">
+    <div class="popup-card">
+      <button id="closePopup" class="close" aria-label="Close">✕</button>
+      <h2 id="popupState" class="popup-state">State name</h2>
+      <p id="popupMyth" class="myth">Myth text...</p>
+
+      <div id="playWrap">
+        <button id="playBtn" class="btn primary">Play: Find the Artifact (1 chance)</button>
+      </div>
+
+      <div id="gameWrap" class="hidden">
+        <p id="gameInfo" class="game-info">Pick one box — only <strong>one</strong> chance!</p>
+        <div id="boxes" class="boxes" role="group" aria-label="Artifact boxes"></div>
+        <p id="resultMsg" class="result"></p>
+        <p id="quoteMsg" class="quote hidden"></p>
+        <button id="closeAfter" class="btn close-btn hidden">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">Made with ☕ & curiosity • Tap dots to explore</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
